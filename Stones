@@ -1,0 +1,82 @@
+/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		EasyReader console = new EasyReader();
+		int choice = 0;
+		int stones = 13;
+		int player = 1;
+		
+		while (stones != 0){
+		
+		
+		while (player == 1){
+		
+			if ((choice>=1)||(choice<=3))
+			{
+				System.out.println("Player 1 choose stones");
+				choice = console.readInt();
+		stones = stones-choice;
+		System.out.println("");
+		
+			}
+		
+			if ((choice<1)||(choice>3))
+		{
+				if ((choice<1)||(choice>3))
+				{
+					System.out.println("Invalid Number. Please choose 1,2, or 3 stones");
+					stones = (stones + choice);
+					choice = console.readInt();
+				}
+				stones = (stones - choice);
+				
+		}
+			System.out.println(stones+" Stones Left");
+		
+		player++;
+		
+		}
+		
+		while ((player == 2)&&(stones!=0))
+		{
+			if ((choice>=1)||(choice<=3))
+			{
+				System.out.println("Player 2 Choose stones");
+				choice = console.readInt();
+		stones = stones-choice;
+		System.out.println("");
+		
+			
+			if ((choice<1)||(choice>3))
+			{
+				System.out.println("Invalid Number. Please choose 1,2, or 3 stones");
+				stones = (stones + choice);
+				choice = console.readInt();
+			}
+			stones = (stones - choice);
+			}
+			System.out.println(stones+" Stones Left");
+		
+			player --;
+		}
+		
+		}
+		if ((player == 1)&&(stones==0))
+		{
+		System.out.println("Player 2 Wins!!");
+		}
+		if ((player == 2)&&(stones==0))
+		{
+		System.out.println("Player 1 Wins!!");
+		}
+		
+		
+	}
+
+}
+
+
