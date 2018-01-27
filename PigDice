@@ -1,0 +1,157 @@
+
+import java.util.Random;
+import java.util.Scanner;
+public class TGOPD {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Random generator tt = new Random();
+		Scanner console = new Scanner(System.in);
+		int hs = 0;		int cs = 0;
+		String word1 = "roll"; on tt
+		boolean x= true;
+		int rs = 0;
+		
+	
+		while  ((hs<100)&&(cs<100))		
+		{
+
+		int die1 = generator.nextInt(6)+1;
+						
+						
+		//================================================================================================
+							//HUMANS TURN
+
+		if (x == true)
+	{
+	
+			if (die1==1)
+			{
+				System.out.println("Human rolled 1, end of turn");			
+				rs = 0;
+				x = false;
+				System.out.println();
+				System.out.println("END OF ROUND");
+				System.out.println("Human Total: "+hs);
+				System.out.println("Computer total: "+cs);
+				System.out.println();
+			}
+			
+			
+			
+					else
+		{
+						System.out.println("Human rolled: "+die1);
+						rs = rs + die1;
+						System.out.println("Round total: "+rs);
+						
+						if (rs>20)
+							{
+								System.out.println();
+								System.out.println("Limit Exceeded");
+								hs = rs + hs - die1;
+								System.out.println("Human scored: "+hs);
+								rs = 0;
+								x = false;
+								System.out.println();
+								System.out.println("END OF ROUND");
+								System.out.println("Human Total: "+hs);
+								System.out.println("Computer total: "+cs);
+								System.out.println();
+							} 
+						
+						if (rs==20)
+						{
+							System.out.println();
+							hs = rs + hs;
+							rs = 0;
+							x = false;
+							System.out.println();
+							System.out.println("END OF ROUND");
+							System.out.println("Human Total: "+hs);
+							System.out.println("Computer total: "+cs);
+							System.out.println();
+						}	
+
+						System.out.println("R for Roll...H for hold");
+						String first = console.nextLine();
+						
+						if (first.equals("H"))
+						{
+						hs = rs + hs;
+						rs = 0;
+						x = false;
+						System.out.println();
+						System.out.println("END OF ROUND");
+						System.out.println("Human Total: "+hs);
+						System.out.println("Computer total: "+cs);
+						System.out.println();
+						}
+
+						
+						
+		}
+	}
+		//================================================================================================
+						//COMPUTERS TURN
+		else
+		{
+			System.out.println("Computer rolled: "+die1);
+			rs = rs + die1;
+			
+			if (die1==1)
+			{
+				System.out.println("Computer rolled 1, end of turn");
+				rs = 0;
+				x = true;
+				System.out.println();
+				System.out.println("END OF ROUND");
+				System.out.println("Human Total: "+hs);
+				System.out.println("Computer total: "+cs);
+				System.out.println();
+			}
+			
+			else if (rs>20)
+			{
+				System.out.println();
+				cs = rs + cs - die1;
+				rs = 0;
+				x = true;
+				System.out.println();
+				System.out.println("END OF ROUND");
+				System.out.println("Human Total: "+hs);
+				System.out.println("Computer total: "+cs);
+				System.out.println();
+			}
+			
+			else 
+			{
+				System.out.println("Round total: "+rs);
+			}
+			
+			
+			
+		}
+						
+		}
+		
+		if (hs>=100)
+		System.out.println("HUMAN WINS");
+		
+		else
+			System.out.println("COMPUTER WINS");
+	}
+}
+
+
+
+
+
+
+
+
+
+
