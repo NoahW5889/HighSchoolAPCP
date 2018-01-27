@@ -1,0 +1,136 @@
+# HighSchoolAPCP
+High School AP Computer Science Projects
+
+/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		{
+		EasyReader console = new EasyReader();
+		int a = 0;
+		System.out.println("Welcome to Wutz’s  WaterWorks!!");
+		System.out.println("Please enter account number:");
+		a = console.readInt();
+		
+		
+		
+		
+		if (a >=0)
+		{
+		double cost = 0;
+		double g = 0;
+		char code = 0;
+		console.readLine();
+		System.out.println("Enter H - Home, C - Commercial");
+		System.out.println("I - Industrial");
+		
+		code = console.readChar();
+		
+		//Take in # of gallons used.....
+		switch(code){
+		
+			case 'H': 
+			case 'h':
+			
+			{
+				System.out.println("Enter # of gallons used..");
+				g = console.readDouble();
+				cost = (double) (5+(0.0005*g));
+				System.out.println("   			 	");
+				System.out.println("Total # of gallons used: "+g);
+				System.out.println("=================================");
+				System.out.println("Usage fee: $5.00");
+				System.out.println("   			 	");
+				System.out.println("Cost per gallon: $0.0005");
+				System.out.println("================================");
+				System.out.println("Total cost: $"+cost);
+				System.out.println("   					 ");
+			}
+				break;
+				
+			case 'C':
+			case 'c':
+			{
+				System.out.println("Enter # of gallons used..");
+				g = console.readDouble();
+				g = g-4000000;
+				cost = (double) (1000+(0.00025*g));
+				System.out.println("   			 	");
+				System.out.println("Total # of gallons used: "+g);
+				System.out.println("=================================");
+				System.out.println("Usage fee: $5.00");
+				System.out.println("   			 	");
+				System.out.println("Cost per gallon: $0.0005");
+				System.out.println("================================");
+				System.out.println("Total cost: $"+cost);
+				System.out.println("   					 ");
+				
+			}
+				break;
+				
+			case 'I':
+			case 'i':
+			{
+				System.out.println("Enter # of gallons used..");
+				g = console.readDouble();
+				
+				if (g<4000000){
+				g = g - 4000000;
+					cost = 1000;
+				System.out.println("   			 	");
+				System.out.println("Total # of gallons used: "+g);
+				System.out.println("=================================");
+				System.out.println("Usage fee: $5.00");
+				System.out.println("   			 	");
+				System.out.println("Cost per gallon: $0.0005");
+				System.out.println("================================");
+				System.out.println("Total cost: $"+cost);
+				System.out.println("   					 ");}
+				
+				if ((g>4000000) && (g<10000000)){
+				
+					cost = 2000;
+				System.out.println("   			 	");
+				System.out.println("Total # of gallons used: "+g);
+				System.out.println("=================================");
+				System.out.println("Usage fee: $5.00");
+				System.out.println("   			 	");
+				System.out.println("Cost per gallon: $0.0005");
+				System.out.println("================================");
+				System.out.println("Total cost: $"+cost);
+				System.out.println("   					 ");}
+				
+				if (g>10000000){
+					g = g-10000000;
+					cost = 3000;
+					System.out.println("   			 	");
+					System.out.println("Total # of gallons used: "+g);
+					System.out.println("=================================");
+					System.out.println("Usage fee: $5.00");
+					System.out.println("   			 	");
+					System.out.println("Cost per gallon: $0.0005");
+					System.out.println("================================");
+					System.out.println("Total cost: $"+cost);
+					System.out.println("   					 ");}
+			}
+				break;
+				}
+		
+		
+		
+		
+		}
+		
+		
+		
+		}
+		
+		
+		
+	}
+
+}
+
+
