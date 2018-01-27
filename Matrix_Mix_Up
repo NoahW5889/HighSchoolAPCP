@@ -1,0 +1,90 @@
+import java.util.Scanner;
+public class Matrix_Mix_Up {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner console = new Scanner(System.in);
+		
+			
+				int matrix2[][] = new int[3][3]; //Creates a 3 by 3
+				int rows = 3; int cols = 3;
+				
+				for (int i=0; i<rows; i++) // Allows user to enter values of Matrix
+					{ 
+					for (int j=0;j<cols;j++) 
+						{
+							System.out.println("Can you enter an int number now for Row "+(i+1)+" Column "+(j+1));
+							matrix2[i][j] = console.nextInt();
+						} 	
+					}
+				System.out.println("Here is the Matrix"); // Prints Matrix
+				
+				for (int i=0; i<rows; i++)
+					{ 
+						for (int j=0;j<cols;j++) 
+						{
+							System.out.print( matrix2[i][j]+" "); 
+						}
+				System.out.println(); 
+					}
+
+				System.out.println(); 
+				
+				for (int w=0; w<rows; w++)
+				{
+					int wah = 0;
+					int pop = 0;
+					
+					for (int k=0;k<cols;k++)
+					{
+						pop = pop + matrix2[k][w];
+						wah = wah + matrix2[w][k];
+					}
+					System.out.println("Row "+(w+1)+" is "+wah);
+					System.out.println("Column "+(w+1)+" is "+pop);
+					System.out.println();
+				}
+		
+				
+						swap(matrix2);
+					
+				
+				
+			System.out.println("Here is the switched matrix");
+	
+			for (int a=0; a<rows; a++)
+			{ 
+				for (int e=0;e<cols;e++) 
+				{
+					System.out.print( matrix2[a][e]+" "); 
+				}
+				System.out.println(); 
+			}
+	
+	
+				
+				//REPLACEMENT
+				
+	}
+	public static void swap(int[][] matrix2)
+	{
+	
+		for (int x=0; x<3; x++)
+		{
+			for (int l=0;l<3;l++)
+			{
+		if (matrix2[x][l] % 2 == 1)
+				matrix2[x][l] = 1;
+			else
+				matrix2[x][l] = 0;
+			}
+		}
+
+	}
+}
+
+
