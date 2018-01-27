@@ -1,0 +1,76 @@
+
+int choice = 0;
+		EasyReader console = new EasyReader();
+		int balance = 2500;
+		int guess = 3;
+		int y1 = 0;
+
+		
+		while ((guess >0)&&(y1 != 2003)){
+		System.out.println("Enter PIN Number :");
+		y1 = console.readInt();
+		if ((y1 != 2003)&&(guess!=0)){
+			guess = guess - 1;
+			System.out.println("Incorrect PIN: Chances remaining: "+guess);
+		}
+		if (guess == 0){
+			System.out.println("Too many incorrect PINS entered. Goodbye.");
+		}
+	}
+		
+		
+		while ((guess != 0)&&(y1==2003)){
+
+		{
+		System.out.println("Enter 1 to Deposit");
+		System.out.println("Enter 2 to Withdrawl");
+		System.out.println("Enter 3 to Current Balance");
+		System.out.println("Enter 4 to Quit");
+		choice =  console.readInt();
+		
+		if (choice == 1)
+			{
+			 System.out.println("Select Amount To Deposit");
+			 int dep =  console.readInt();
+			 balance = dep + balance;
+			 System.out.println("Current Balance: "+balance);
+			}
+		if (choice == 2)
+			{
+			 System.out.println("Select Amount To Withdrawl");
+			 int with =  console.readInt();
+			 balance = balance-with;
+			 System.out.println("Current Balance: "+balance);
+			
+			 if(balance<0)
+			 {
+			System.out.println("Insufficient amount");
+			System.out.println("Withdrawl reset");
+			balance = balance + with;
+			System.out.println("Current Balance: "+balance);
+			 }
+			}
+		if (choice == 3)
+			{
+			 System.out.println("Current Balance: "+balance);
+			}
+	
+		if (choice == 4)
+		{
+			 System.out.println("Thank you for choosing our bank. Goodbye");
+			 break;
+		}
+		
+		
+		
+		
+			}
+			
+			}
+		
+		}
+		
+		
+	
+	}
+
