@@ -1,0 +1,97 @@
+import java.util.Scanner;
+public class Searchy_Findy {
+
+	/**
+ 	* @param args
+ 	*/
+	public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        int[] numbers = { 2, 80, 64, 26, 0, 94, 37, 23, 25, 71 };
+
+        Scanner console = new Scanner(System.in);
+        System.out.println("Enter a number to find in the array");
+        int key = console.nextInt();
+
+        SelectionSortA(numbers, key);
+        System.out.println();
+        SelectionSortD(numbers, key);
+
+    }
+
+    // ASCENDING//
+    public static void SelectionSortA(int[] num, int key) {
+
+        for (int i = 0; i < num.length; i++) {
+            int index = i;
+            for (int j = i + 1; j < num.length; j++) {
+                if (num[j] < num[index])
+                    index = j;
+            }
+            int smallerNumber = num[index];
+            num[index] = num[i];
+            num[i] = smallerNumber;
+            System.out.print(smallerNumber + " ");
+        }
+
+        // FINDING NUM
+        int k = 0;
+        boolean found = false;
+
+        for (k = 0; k < num.length; k++) {
+            if (num[k] == key) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            System.out.println();
+            System.out.println("Ascending: Found " + key + " at index " + k + ".");
+        } else {
+            System.out.println();
+            System.out.println(key + " is not in this array");
+        }
+        // END OF FINDING NUM
+    }
+
+    // DESCENDING//
+    public static void SelectionSortD(int[] num, int key) {
+
+        int i, j;
+        for ( i = 0; i < num.length; i++) {
+            int index = i;
+            for (j = i + 1; j < num.length; j++) {
+                if (num[j] > num[index])
+                    index = j;
+            }
+            int biggerNum = num[index];
+            num[index] = num[i];
+            num[i] = biggerNum;
+            System.out.print(biggerNum + " ");
+        }
+        // FINDING NUM
+        int k = 0;
+        boolean found = false;
+
+        for (k = 0; k < num.length; k++) {
+            if (num[k] == key) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+
+            System.out.println();
+            System.out.println("Descending: Found " + key + " at index " + k + ".");
+        } else {
+            System.out.println();
+            System.out.println(key + " is not in this array");
+        }
+        // END OF FINDING NUM
+    }
+
+}
+
+
