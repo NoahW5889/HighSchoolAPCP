@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Name1 {
+
+	/**
+ 	* @param args
+ 	*/
+	public static void main(String[] args) {
+    	// TODO Auto-generated method stub
+
+    	Name Name = new Name();
+   	 
+    	Scanner console = new Scanner(System.in);
+    	System.out.println("Please enter name");
+    	String name = console.nextLine();
+    
+    	System.out.println("First Name: "+Name.getFirst(name));
+    	System.out.println("Middle Name: "+Name.getMiddle(name));
+    	System.out.println("Last Name: "+Name.getLast(name));
+    	System.out.println("First, Middle, Last Name: "+Name.firstMiddleLast(name));
+    	System.out.println("Last, Middle, First Name: "+Name.lastFirstMiddle(name));
+    	System.out.println("Initials: "+Name.initials(name));
+    	int len1 = name.length();
+    	System.out.println("Length: "+len1);
+    	
+    	System.out.println("Please enter Second name");
+    	String name2 = console.nextLine();
+   	 
+    	System.out.println("First Name: "+Name.getFirst(name2));
+    	System.out.println("Middle Name: "+Name.getMiddle(name2));
+    	System.out.println("Last Name: "+Name.getLast(name2));
+    	System.out.println("First, Middle, Last Name: "+Name.firstMiddleLast(name2));
+    	System.out.println("Last, Middle, First Name: "+Name.lastFirstMiddle(name2));
+    	System.out.println("Initials: "+Name.initials(name2));
+    	int len2 = name.length();
+    	System.out.println("Length: "+len2);
+    	
+    	if (Name.equals(name, name2)==true)
+        	System.out.println("Comparison: They the same");
+   	 
+    	if (Name.equals(name, name2)==false)
+    	System.out.println("Comparison: They are Different");
+    
+   	 
+	}
+
+}
