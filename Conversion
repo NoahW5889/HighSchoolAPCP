@@ -1,0 +1,90 @@
+import java.util.Scanner;
+public class converse {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		Scanner console = new Scanner(System.in);
+		System.out.println("Welcome to the Conversion Machine!");
+		System.out.println();
+		System.out.println("Using:		Inches - in");
+		System.out.println("		Feet - ft");
+		System.out.println("		Yards - yds");
+		System.out.println("		Miles - mi");
+		System.out.println();
+		
+		System.out.println("This will convert one to another...");
+		System.out.println();
+		
+		System.out.println("What would you like to convert?");
+		String first = console.nextLine();
+		
+		System.out.println("What would you like to convert to?");
+		String sec = console.nextLine();
+		
+		System.out.println("What is the value: ");
+		double val = console.nextDouble();
+		
+		double out = 0;
+		if (first.equals("in"))
+		{
+			if(sec.equals("ft"))
+				 out = val / 12;
+			System.out.println(out);
+			
+			if(sec.equals("yds"))
+				 out = val / 36;
+				
+			if(sec.equals("mi"))
+				out = val / 63360;
+		}
+/////////////////////////////////////////////////////////////////////////////////////////
+		if (first.equals("ft"))
+		{
+			if(sec.equals("in"))
+				 out = val / 12;
+			
+			if(sec.equals("yds"))
+				 out = val / 36;
+				
+			if(sec.equals("mi"))
+				out = val / 63360;
+		}
+/////////////////////////////////////////////////////////////////////////////////////////
+		if (first.equals("yds"))
+		{
+			if(sec.equals("in"))
+				 out = val / 12;
+			System.out.println(out);
+			
+			if(sec.equals("ft"))
+				 out = val / 36;
+				
+			if(sec.equals("mi"))
+				out = val / 63360;
+		}
+/////////////////////////////////////////////////////////////////////////////////////////
+		if (first.equals("mi"))
+		{
+			if(sec.equals("in"))
+				 out = val / 12;
+			System.out.println(out);
+			
+			if(sec.equals("ft"))
+				 out = val / 36;
+				
+			if(sec.equals("yds"))
+				out = val / 63360;
+		}
+		System.out.println("Here it is.....");
+		System.out.println(out);
+	}
+
+}
+
+
+
