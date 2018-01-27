@@ -1,0 +1,78 @@
+public class longword {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		EasyReader console = new EasyReader();
+		int choice = 0;
+		int stones = 13;
+		int player = 1;
+		
+		while (true){
+		
+		
+		while (player == 1){
+		
+			if ((choice>=1)||(choice<=3))
+			{
+				System.out.println("Player 1 Choose stones");
+				choice = console.readInt();
+		stones = stones-choice;
+		System.out.println("");
+		System.out.println(stones+" Stones Left");
+			}
+		
+			if ((choice<1)||(choice>3))
+		{
+				System.out.println("Invalid Number. Please choose 1,2, or 3 stones");
+			player ++;
+		}
+		
+		
+		
+		
+		
+		
+		
+		player++;
+		
+		}
+		
+		while (player == 2)
+		{
+			if ((choice>=1)||(choice<=3))
+			{
+				System.out.println("Player 2 Choose stones");
+				choice = console.readInt();
+		stones = stones-choice;
+		System.out.println("");
+		System.out.println(stones+" Stones Left");
+			}
+		
+			if ((choice<1)||(choice>3))
+		{
+			System.out.println("Invalid Number. Please choose 1,2, or 3 stones");
+		}
+		
+		
+			player --;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		}
+	}
+
+}
+
+
+
