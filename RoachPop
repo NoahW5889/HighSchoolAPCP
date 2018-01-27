@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+
+public class RoahPop {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner console = new Scanner(System.in);
+		
+		RoachSimulation RoachPop = new RoachSimulation();
+		
+		System.out.println("Enter amount of roaches");
+		int roachamount = console.nextInt();
+		
+		int x = 0;
+		while (x<4)
+		{
+		int roch = RoachPop.breed(roachamount);
+		System.out.println("Initial Roaches: "+roachamount);
+		System.out.println("Breed: "+roch);
+		System.out.println("Spray: "+RoachPop.spray(roch));
+		System.out.println("Now Roaches: "+RoachPop.left(roch));
+		roachamount = (int) RoachPop.left(roch);
+		System.out.println();
+		x++;
+		}
+	}
+
+}
+/*
+
+public class RoachSimulation {
+private int spray = 0;
+private int pop = 0;
+
+	public int breed(int roachamount)
+	{
+		return roachamount*2;
+	
+	}
+	
+	public double spray(double roch)
+	{
+		spray = (int) (roch*0.1);
+		return spray;
+	}
+	
+	public double left(double roch)
+	{
+		pop = (int) (roch - spray);
+		return pop;
+	}
+		
+}
+
+
